@@ -12,6 +12,10 @@ body {
     background-color:  #283644;
 }
 
+.hero{
+    overflow:hidden;
+}
+
 button {
 }
 

@@ -1,11 +1,13 @@
 var img = $(".blinking-fire");
+var count=0
+function flames(){
+    count++
+    if (count%2===0) {
+    $(".blinking-fire").animate({left:'20px', opacity: '0.4'},"fast");
+}else {
+    $(".blinking-fire").animate({left:'20px', opacity: '1.0'},"fast");
+}
+}
 
-var interval = window.setInterval(function(){
-    if(img.css.visibility ="hidden"){
-        img.css.visibility = "visible";
-    }else{
-        img.css.visibility = "hidden";
-    }
-}, 700); 
-
+setInterval(flames,1000)
 console.log("hello")
