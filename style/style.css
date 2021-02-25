@@ -14,6 +14,16 @@ body {
 
 .hero{
     overflow:hidden;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100%; */
+}
+
+img {
+    background-image: url("./barcadeheroresize.jpg");
 }
 
 button {
@@ -179,13 +189,17 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 100px:
 }
 
 .social-handles {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 20px;
-    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
+.social {
+    margin: 1rem;
 }
