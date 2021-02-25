@@ -14,11 +14,13 @@ body {
 
 .hero{
     overflow:hidden;
-    height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("../barcadeheroresize.jpg");
+    height: 600px;
+    width:100%;
     /* width: 100%; */
 }
 
@@ -64,12 +66,6 @@ button {
 
 .nav-item {
     list-style-type: none;
-}
-
-.hero {
-    height: 600px;
-    background: #328cc1;
-    width:100%;
 }
 
 .interactive-body {
@@ -141,13 +137,13 @@ button {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
+    font-family: 'Press Start 2P', cursive;
 }
 
 .game-title-top {
     align-self: center;
     font-size: 10px;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .game-title-bottom {
@@ -158,7 +154,7 @@ button {
     font-size: 12px;
     font-weight: bolder;
     width: 100%;
-    font-family: 'Press Start 2P', cursive;
+    
 }
 
 
