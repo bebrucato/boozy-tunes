@@ -11,3 +11,5 @@ function flames(){
 
 setInterval(flames,1000)
 console.log("hello")
+
+var list
