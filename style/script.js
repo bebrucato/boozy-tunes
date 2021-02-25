@@ -1,4 +1,10 @@
-$(document).ready(function (){ 
+$(document).ready(function () { 
+    var tequila = $("#booze2")
+      var whiskey = $("#booze3")
+      var gin = $("#booze4")
+      var rum = $("#booze5")
+      var mezcal = $("#booze6")
+      var brandy = $("#booze7")
     var img = $(".blinking-fire");
     var count=0
     function flames(){
@@ -10,11 +16,79 @@ $(document).ready(function (){
     }
     }
     
-    setInterval(flames,1000)
-  
+    setInterval(flames,1000);
+
+    function getAPI(queryURL, searchTerm, param1, param2, param3) {
+        var queryString = queryURL + pascalCaseFormatting(searchTerm) 
+        return fetch(queryString)
+    }
+    
+
+    var vodka = $("#booze1")
+    // var vodkaUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=vodka";
+    var boozeResult = $(".booze-result")
+    var boozeMenu = $(".booze-menu")
     
     
-  
+    function displayDrink(drinkList) {
+        for(var i = 0; i < drinkList.length; i++) {
+            var boozeItem = $("<li>");
+            var boozeRow = $("<div>");
+            var boozeColumn = $("<div>");
+            var boozeImage = $("<img>")
+            var boozeHeader = $("<h1>");
+            // Destination = boozeHeader, action=text, content=drinkList[i].strDrink
+            boozeHeader.text(drinkList[i].strDrink);
+            boozeImage.attr("src", drinkList[i].strDrinkThumb);
+            boozeImage.attr("alt", drinkList[i].strDrink);
+            boozeRow.addClass("row");
+            boozeRow.attr("data-drink", drinkList[i].idDrink)
+            boozeColumn.addClass("col-md-12");
+            boozeItem.append(boozeHeader);
+            boozeItem.append(boozeImage);
+            boozeColumn.append(boozeItem);
+            boozeRow.append(boozeColumn)
+            boozeResult.append(boozeRow);
+        };
+        var drinkId = boozeResult.children().data("drink")
+        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+        getAPI(queryURL, drinkId.toString())
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data);
+        })
+        .catch(function(err) {
+            console.error(err)
+        });
+            // if(boozeMenu.val()===vodka){
+            //     return get(vodkaUrl).innertext.append(boozeResult)
+            // }
+    }
+        
+       var vodkaURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
+
+    function pascalCaseFormatting(str) {
+        //    ** Goal is to take a word and capitalize the first letter and return the word
+    var capitalLetter = str.substring(0, 1).toUpperCase();
+    return str.replace(str.substring(0, 1), capitalLetter)
+    };
+
+    // displayVodka()
+//   console.log(displayVodka)
+    getAPI(vodkaURL, "vodka")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
     
 })
 
+  
