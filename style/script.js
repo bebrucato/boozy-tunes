@@ -11,3 +11,8 @@ function flames(){
 
 setInterval(flames,1000)
 console.log("hello")
+
+
+$(".dropdown-toggle").on("click",$(".menu1").show());
+console.log("hi")
+

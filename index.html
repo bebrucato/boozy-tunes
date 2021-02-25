@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./style/style.css"/>
 </head>
 <body>
     <!-- TOP LOGO/NAV BAR -->
@@ -44,39 +44,35 @@
                 <p>Boozin'</p>
             </header>
             <div class="col-6 booze-left">
-                <div class="dropdown" style="margin:10px;">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose your BOOZE
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropBtn1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <div class="dropdown-menu menu1" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                    <div class="game-body-bottom">
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                
+                <div class="option">
+                    <h1>OR</h1>
                 </div>
-                <div class="dropdown" style="margin:10px;">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose your BOOZE
+                <div class="col-6 booze-left">
+                <div class="input-group" style="margin:10px; width:100%">
+                    <div class="form-outline">
+                      <input type="search" id="form1" class="form-control" placeholder="cocktail by name" />
+                    </div>
+                    <button type="button" class="btn btn-primary w-100">
+                      <i class="fa fa-search"></i>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                  </div>
                 </div>
-                <div class="dropdown" style="margin:10px;">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose your BOOZE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-                <div class="game-body-bottom">
-                    <button type="button" class="btn btn-primary">Submit</button>
-                </div>
+    
+                
             </div>
             <div class="col-6 booze-right">
                 <div class="place-holder">
