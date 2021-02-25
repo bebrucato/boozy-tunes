@@ -48,10 +48,10 @@
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       Choose your BOOZE (main ingredient)
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu booze-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" id="booze1" href="#">Action</a></li>
+                      <li><a class="dropdown-item" id="booze2" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" id="booze3" href="#">Something else here</a></li>
                     </ul>
                 </div>
                     <div class="game-body-bottom">
@@ -64,9 +64,9 @@
                 <div class="col-6 booze-left">
                 <div class="input-group" style="margin:10px; width:100%">
                     <div class="form-outline">
-                      <input type="search" id="form1" class="form-control" placeholder="cocktail by name" />
+                      <input type="search" id="form1" class="form-control booze-input" placeholder="cocktail by name" />
                     </div>
-                    <button type="button" class="btn btn-primary w-100">
+                    <button type="button" class="btn btn-primary w-100" id="booze-search-btn">
                       <i class="fa fa-search"></i>
                     </button>
                   </div>
