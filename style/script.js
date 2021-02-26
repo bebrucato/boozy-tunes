@@ -64,12 +64,10 @@ $(document).ready(function () {
         .catch(function(err) {
             console.error(err)
         });
-            // if(boozeMenu.val()===vodka){
-            //     return get(vodkaUrl).innertext.append(boozeResult)
-            // }
+        
     }
         
-       var vodkaURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
+       var alcoholURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
 
     function pascalCaseFormatting(str) {
         //    ** Goal is to take a word and capitalize the first letter and return the word
@@ -79,7 +77,7 @@ $(document).ready(function () {
 
     // displayVodka()
 //   console.log(displayVodka)
-    getAPI(vodkaURL, "vodka")
+    getAPI(alcoholURL,"tequila")
     .then(function(response) {
         return response.json();
     })
@@ -89,7 +87,33 @@ $(document).ready(function () {
     .catch(function(err) {
         console.error(err)
     });
+    
 
+    var img = $(".blinking-fire");
+    var bar = $(".blink-text")
+    var count=0
+    function flames(){
+        count++
+        if (count%2===0) {
+        $(".blinking-fire").animate({left:'20px', opacity: '0.4'},"fast");
+    }else {
+        $(".blinking-fire").animate({left:'20px', opacity: '1.0'},"fast");
+    }
+    }
+    function blink(){
+        count++
+        if (count%2===0) {
+        $(".blink-text").animate({left:'20px', opacity: '0.0'},"fast");
+    }else {
+        $(".blink-text").animate({left:'20px', opacity: '1.0'},"fast");
+    }
+    }
+    
+    
+    setInterval(flames,1000)
+    setInterval(blink,300)
+    console.log("hello")
+    
     
 })
 
@@ -119,4 +143,4 @@ setInterval(flames,1000)
 setInterval(blink,300)
 console.log("hello")
 
-var list
+
