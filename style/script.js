@@ -72,8 +72,8 @@ $(document).ready(function () {
     }
         
        var alcoholURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
-    var recipeURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=14029"
-
+    var vrecipeURL1 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=14029"
+    var vrecipeURL2 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17105"
     
 
     function pascalCaseFormatting(str) {
@@ -85,8 +85,8 @@ $(document).ready(function () {
     // displayVodka()
 //   console.log(displayVodka)
     
-    
-    getAPI(recipeURL,"")
+    $("#booze1").click( function (){
+    getAPI(vrecipeURL1,"")
     .then(function(response) {
         return response.json();
     })
@@ -96,6 +96,17 @@ $(document).ready(function () {
     .catch(function(err) {
         console.error(err)
     });
+    getAPI(vrecipeURL2,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+})
 
     var img = $(".blinking-fire");
     var bar = $(".blink-text")
