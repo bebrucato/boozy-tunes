@@ -131,6 +131,7 @@ button {
 }
 
 .place-holder {
+    display: flex;
     width: 200px;
     height:200px;
     border: 5px solid #d9b310;
@@ -215,7 +216,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px:
+    padding: 100px;
 }
 
 .social-handles {
@@ -228,4 +229,25 @@ button {
 
 .social {
     margin: 1rem;
+}
+
+
+.booze-result {
+    display:flex;
+    flex-direction: column;
+    overflow: scroll;
+    max-width: 400px;
+    max-height: 400px;  
+    width: 100%;
+}
+
+.booze-img {
+    display: flex;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.booze-header {
+    display: flex;
+    font-size: 75%;
 }
