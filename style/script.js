@@ -41,6 +41,8 @@ $(document).ready(function () {
             boozeHeader.text(drinkList[i].strDrink);
             boozeImage.attr("src", drinkList[i].strDrinkThumb);
             boozeImage.attr("alt", drinkList[i].strDrink);
+            boozeImage.addClass("booze-img");
+            boozeHeader.addClass("booze-header");
             boozeRow.addClass("row");
             boozeRow.attr("data-drink", drinkList[i].idDrink)
             boozeColumn.addClass("col-md-12");
