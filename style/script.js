@@ -29,6 +29,7 @@ $(document).ready(function () {
     var boozeResult = $(".booze-result")
     var boozeMenu = $(".booze-menu")
     
+    var vodkaArray = ["idDrink:15346", "idDrink:17105", "idDrink:14029"]
     
     function displayDrink(drinkList) {
         for(var i = 0; i < drinkList.length; i++) {
@@ -37,8 +38,10 @@ $(document).ready(function () {
             var boozeColumn = $("<div>");
             var boozeImage = $("<img>")
             var boozeHeader = $("<h1>");
+            var boozeRecipe = $("<p>");
             // Destination = boozeHeader, action=text, content=drinkList[i].strDrink
             boozeHeader.text(drinkList[i].strDrink);
+            boozeRecipe.text(drinkList[i].strInstructions);
             boozeImage.attr("src", drinkList[i].strDrinkThumb);
             boozeImage.attr("alt", drinkList[i].strDrink);
             boozeImage.addClass("booze-img");
@@ -46,6 +49,7 @@ $(document).ready(function () {
             boozeRow.addClass("row");
             boozeRow.attr("data-drink", drinkList[i].idDrink)
             boozeColumn.addClass("col-md-12");
+            boozeItem.append(boozeRecipe);
             boozeItem.append(boozeHeader);
             boozeItem.append(boozeImage);
             boozeColumn.append(boozeItem);
@@ -68,6 +72,9 @@ $(document).ready(function () {
     }
         
        var alcoholURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
+    var recipeURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=14029"
+
+    
 
     function pascalCaseFormatting(str) {
         //    ** Goal is to take a word and capitalize the first letter and return the word
@@ -77,7 +84,9 @@ $(document).ready(function () {
 
     // displayVodka()
 //   console.log(displayVodka)
-    getAPI(alcoholURL,"tequila")
+    
+    
+    getAPI(recipeURL,"")
     .then(function(response) {
         return response.json();
     })
@@ -87,7 +96,6 @@ $(document).ready(function () {
     .catch(function(err) {
         console.error(err)
     });
-    
 
     var img = $(".blinking-fire");
     var bar = $(".blink-text")
