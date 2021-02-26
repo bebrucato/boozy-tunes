@@ -87,13 +87,44 @@ $(document).ready(function () {
     var vrecipeURL4 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=13535"
     var vrecipeURL5 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=16942"
 
-//tequila recips vars
+//tequila recipe vars
     var trecipeURL1 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11112";
     var trecipeURL2 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=14602";
     var trecipeURL3 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178348"
     var trecipeURL4 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17174"
     var trecipeURL5 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178307"
-    
+
+//whiskey recipe vars
+    var wrecipeURL1 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=13194"
+    var wrecipeURL2 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178345"
+    var wrecipeURL3 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=13200"
+    var wrecipeURL4 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=16262"
+
+//gin recipe vars
+    var grecipeURL1 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17834"
+    var grecipeURL2 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11339"
+    var grecipeURL3 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11054"
+    var grecipeURL4 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178340"
+    var grecipeURL5 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178330"
+
+//rum recipe vars
+    var rrecipeURL1 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17268"
+    var rrecipeURL2 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17241"
+    var rrecipeURL3 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178309"
+    var rrecipeURL4 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=14065"
+    var rrecipeURL5 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=14364"
+
+//mezcal recipe vars
+    var mrecipeURL1 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17246"
+
+//brandy recipe vars
+    var brecipeURL1 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11084"
+    var brecipeURL2 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12450"
+    var brecipeURL3 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17192"
+    var brecipeURL4 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11251"
+    var brecipeURL5 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12138"
+
+
     function pascalCaseFormatting(str) {
         //    ** Goal is to take a word and capitalize the first letter and return the word
     var capitalLetter = str.substring(0, 1).toUpperCase();
@@ -102,7 +133,7 @@ $(document).ready(function () {
 
     // displayVodka()
 //   console.log(displayVodka)
-    
+// Vodka button click event
     $("#booze1").click( function (){
     getAPI(vrecipeURL1,"")
     .then(function(response) {
@@ -160,6 +191,7 @@ $(document).ready(function () {
     });
 })
 
+//Tequila button click event
 $("#booze2").click( function (){
     getAPI(trecipeURL1,"")
     .then(function(response) {
@@ -216,6 +248,242 @@ $("#booze2").click( function (){
         console.error(err)
     });
 
+})
+
+//Whiskey button click event
+$("#booze3").click( function (){
+    getAPI(wrecipeURL1,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(wrecipeURL2,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(wrecipeURL3,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(wrecipeURL4,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+})
+
+
+//Gin button click event
+$("#booze4").click( function (){
+    getAPI(grecipeURL1,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(grecipeURL2,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(grecipeURL3,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(grecipeURL4,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(grecipeURL5,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+})
+
+//Rum button click event
+$("#booze5").click( function (){
+    getAPI(rrecipeURL1,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(rrecipeURL2,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(rrecipeURL3,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(rrecipeURL4,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(rrecipeURL5,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+})
+
+//Mezcal button click event
+$("#booze6").click( function (){
+    getAPI(mrecipeURL1,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+})
+
+//Brandy button click event
+$("#booze7").click( function (){
+    getAPI(brecipeURL1,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(brecipeURL2,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(brecipeURL3,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(brecipeURL4,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    getAPI(brecipeURL5,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        displayDrink(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
 })
 
     var img = $(".blinking-fire");
