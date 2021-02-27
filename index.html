@@ -49,7 +49,7 @@
     <!-- "BOOZE" CONTAINER -->
         <div class="col-6 booze">
             <header class="col-12 booze-header">
-                Pick Your Ingredients!
+                Pick Your Poison!
             </header>
             <!-- note: "-right" is now top and "-left" is now bottom -->
             <div class="col-12 booze-right">
@@ -58,15 +58,16 @@
                     <ul class="booze-result"></ul>
                 </div>
             </div>
+            <!-- <div class="booze-spacer"></div> -->
             <div class="col-12 booze-button-layout">
                 <div class="col-10 booze-left">
-                    <button type="button" class="btn btn-primary booze-button" id="booze1">Vodka</button>
-                    <button type="button" class="btn btn-primary booze-button" id="booze2">Tequila</button>
-                    <button type="button" class="btn btn-primary booze-button" id="booze3">Whiskey</button>
-                    <button type="button" class="btn btn-primary booze-button" id="booze4">Gin</button>
-                    <button type="button" class="btn btn-primary booze-button" id="booze5">Rum</button> 
-                    <button type="button" class="btn btn-primary booze-button" id="booze6">Mezcal</button>
-                    <button type="button" class="btn btn-primary booze-button" id="booze7">Brandy</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze1">Vodka</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze2">Tequila</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze3">Whiskey</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze4">Gin</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze5">Rum</button> 
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze6">Mezcal</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze7">Brandy</button>
                 </div>
             </div>
             <div class="col-12 booze-restart">
@@ -80,43 +81,26 @@
             </header>
            <!-- note: "-right" is now top and "-left" is now bottom -->
             <div class="col-12 tunes-right">
+                <img src="gameboyborder-blue-v2.jpg" class="vibes-display">
                 <div class="place-holder">
+                    <!-- PLACE RESULTS FOR SPOTIFY HERE -->
+                    <!-- <ul class="vibes-result"></ul> -->
                 </div>
             </div>
-            <div class="col-6 tunes-left">
-                <div class="dropdown" style="margin:10px;">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose your VIBE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+            <!-- <div class="tunes-spacer"></div> -->
+            <div class="col-12 tunes-button-layout">
+                <div class="col-10 tunes-left">
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes1">Rock</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes2">Classical</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes3">Jazz</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes4">Pop</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes5">R&B</button> 
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes6">Indie</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes7">Electronic</button>  
                 </div>
-                <div class="dropdown" style="margin:10px;">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose your VIBE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown" style="margin:10px;">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Choose your VIBE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-                <div class="game-body-bottom">
-                    <button type="button" class="btn btn-primary">Submit</button>
-                </div>
+            </div>
+            <div class="col-12 tunes-restart">
+                <input class="btn btn-primary tunes-button" type="reset" id="clearBtn2" value="RESTART">
             </div>
         </div>
     </div>
