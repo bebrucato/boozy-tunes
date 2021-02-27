@@ -15,6 +15,10 @@ body {
     background-color:  #283644;
 }
 
+img {
+    width: 100px
+}
+
 .hero{
     overflow:hidden;
     background-attachment: fixed;
@@ -53,6 +57,7 @@ body {
 
 
 .black-box {
+    text-size-adjust: relative;
     display: flex;
     flex-direction: row;
     background-color: #1d2731;
@@ -146,7 +151,6 @@ button {
     flex-wrap:wrap;
     /* padding-top: 30px; */
     font-family: 'Press Start 2P', cursive;
-    padding-top: 
 }
 
 .booze-right {
@@ -157,11 +161,16 @@ button {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url(../gameboyborder.jpg);
+    /* background-image: url(../gameboyborder.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 420px;
+    height: 420px; */
     
+}
+
+.booze-display {
+    z-index:0;
+    width: 100%;
 }
 
 .booze-restart{
@@ -196,7 +205,8 @@ button {
     align-items: center;
     justify-content: flex-end;
     background-color: #c8b8c8;
-    /* justify-content: center; */
+    padding-top: 12px;
+    padding-bottom: 20px;
 }
 
 .tunes-button-layout{
@@ -225,10 +235,10 @@ button {
 
 .booze-place-holder {
     position: absolute;
-    width: 320px;
-    height:260px;
+    width: 300px;
+    height:200px;
     border: 5px none #d9b310;
-    z-index: 99999;
+    z-index: 9999999;
     margin: 200px;
     margin-top: 180px;  
 }
@@ -318,21 +328,16 @@ button {
     font-family: 'Press Start 2P', cursive;
     font-size: 8px;
     color: rgb(38, 252, 74);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    z-index: 99999;
 }
 
-.booze-img {
-    display: flex;
-    max-height: 100px;
-    max-width: 100px;
-}
 
 .tunes-header,
 .booze-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:;
     font-family: 'Press Start 2P', cursive;
     font-size: 1rem;
     top: 300px;
