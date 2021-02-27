@@ -1,7 +1,14 @@
-
+:root {
+    --gold: #d9b310;
+    --dark: #1d2731;
+    --bluetext: #106efd;
+    --pink: #c8b8c8;
+    --darkpink: rgb(190, 157, 190)
+}
 
 * {
    box-sizing: border-box;
+   text-decoration: none;
 }
 
 body {
@@ -14,6 +21,11 @@ body {
     background-color:  #283644;
 }
 
+img {
+    width: 120px;
+    align-self: center;
+}
+
 .hero{
     overflow:hidden;
     background-attachment: fixed;
@@ -21,7 +33,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../barcadeheroresize.jpg");
-    height: 600px;
+    height: 500px;
     width:100%;
     /* width: 100%; */
 }
@@ -39,23 +51,42 @@ body {
 .hero-header {
     position: absolute;
     z-index: 1000;
-    color: #d9b310;
+    color: var(--gold);
     font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
     top: 300px;
 }
 
+.spacer {
+    background-color:  #283644;
+    height: 10px;
+}
+
+
 .black-box {
+    text-size-adjust: relative;
     display: flex;
+    flex-direction: row;
     background-color: #1d2731;
     padding: .6rem;
+    font-size: 16px;
+}
+
+.black-box-two {
+    text-size-adjust: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #1d2731;
+    padding: .6rem;
+    font-size: 14px;
 }
 
 .blink-text {
     width: 1.8rem;
-    height: 2.5rem;
-    background-color: #d9b310;
-    margin-top: 2px;
+    height: 2.2rem;
+    background-color:var(--gold);
+    margin-top: 0px;
+    align-self: baseline;
 }
     
 
@@ -82,7 +113,7 @@ button {
 .temporary-logo{
     font-size: 24px;
     font-family: 'Press Start 2P', cursive;
-    color: #d9b310;
+    color: var(--gold);
     padding-top: 2px;
     display: flex;
     justify-content: center;
@@ -93,7 +124,7 @@ button {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    background: #d9b310;
+    background: var(--gold);
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -105,37 +136,86 @@ button {
     display: flex;
     flex-direction: row;
     width: 100%;
+    overflow: hidden;
 }
 
 .booze {
-    background-color: #0b3c5d;
-    /* display: flex;
-    flex-wrap: wrap; */
+    /* PINK THAT MATCHES JPG background-color: #c8b8c8; */
+    background-color: rgb(190, 157, 190);
+    margin-right:0px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    border-radius: 10px 50px 10px 50px;
+    border: 5px solid var(--gold);
 }
 
+.tunes {
+    background-color: #87b8d1;
+    margin-left:1px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    border-radius: 50px 10px 50px 10px;
+    border: 5px solid var(--gold);
+}
+
+.tunes-spacer,
+.booze-spacer {
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+}
+
+.tunes-left,
 .booze-left {
-    background-color: #c8b8c8;
     display: flex;
     flex-direction:row;
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
-    height: 100px;
+    /* padding-top: 30px; */
+    font-family: 'Press Start 2P', cursive;
 }
 
 .booze-right {
     position: relative;
-    background-color: #1469a1;
     display: flex;
     flex-direction: center;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url(../gameboyborder.png);
+    /* background-image: url(../gameboyborder.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 470px
+    height: 420px; */
     
+}
+.vibes-display,
+.booze-display {
+    z-index:0;
+    width: 100%;
+}
+
+.tunes-restart,
+.booze-restart{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tunes-right{
+    position: relative;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* background-image: url(../gameboyborder-blue.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 300px  */
 }
 
 .gameboy {
@@ -143,43 +223,59 @@ button {
 
 }
 
+.booze-button-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #c8b8c8;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+.tunes-button-layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #a8d7e3;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+.tunes-button,
+.booze-button {
+    margin: 3px 10px 5px 10px;
+}
+
+
+
 .place-holder {
     position: absolute;
     display: flex;
     width: 380px;
-    height:340px;
-    border: 5px solid #d9b310;
+    height:260px;
+    border: 5px solid var(green);
     margin: 30px;
     z-index: 99999;
     margin: 200px;
-    margin-top: 260px;
-    
+    margin-top: 260px;  
 }
 
-.tunes{
-    background-color: #1d2731;
-    display: flex;
-    flex-wrap: wrap;
+.booze-place-holder {
+    position: absolute;
+    width: 300px;
+    height:200px;
+    border: 5px none var(--gold);
+    z-index: 9999999;
+    margin: 200px;
+    margin-top: 180px;  
 }
 
-.tunes-left{
-    background-color: #283644;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;   
-}
 
-.tunes-right {
-    background-color: #374b5f;
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-    align-items: center;
-}
 .game {
-    background: #328cc1;
+    background: #5a65a6;
     width:100%;
+    padding-bottom: 20px;
 }
 
 .game-title {
@@ -193,6 +289,7 @@ button {
     align-self: center;
     font-size: 10px;
     margin-top: 20px;
+    color: var(--gold);
 }
 
 .game-title-bottom {
@@ -203,9 +300,11 @@ button {
     font-size: 12px;
     font-weight: bolder;
     width: 100%;
+    color: var(--gold);
+    background-color: #1d2731;
     
-}
 
+}
 
 .game-body-top,
 .game-body-middle{
@@ -219,8 +318,7 @@ button {
 .game-body-bottom{
     display: flex;
     justify-content: center;
-    margin: 30px 0;
-    
+    font-family: 'Press Start 2P', cursive;
 }
 
 
@@ -257,22 +355,141 @@ button {
     position: absolute;  
     width: 100%;
     height: 100%;
+    list-style: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    color: rgb(38, 252, 74);
+    overflow-x: hidden;
+    z-index: 99999;
 }
 
-.booze-img {
-    display: flex;
-    max-height: 100px;
-    max-width: 100px;
-}
 
+.tunes-header,
 .booze-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c8b8c8;
     font-family: 'Press Start 2P', cursive;
     font-size: 1rem;
     top: 300px;
     padding-top: 20px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
 }
+
+.curator-screen{
+    width:80%;
+    margin: 20px;
+    margin-top:0;
+ 
+}
+.curator-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#booze1 {
+    background: orange;
+    border: none;
+}
+
+#booze2 {
+    background: green;
+    border: none;
+}
+
+#booze3 {
+    background:indigo;
+    border: none;
+}
+
+#booze4 {
+    background: blue;
+    border: none;
+}
+
+#booze5 {
+    background: black;
+    border: none;
+}
+
+#booze6 {
+    background: yellow;
+    color: black;
+    border: none;
+}
+
+#booze7 {
+    background: salmon;
+    border: none;
+}
+
+#tunes1 {
+    background: var(--gold);
+    border: none;
+}
+
+#clearBtn1 {
+    border-radius: 100px;
+    background: red;
+    border: none;
+    font-family: 'Press Start 2P', cursive;;
+    margin: 15px
+}
+
+#clearBtn2 {
+    border-radius: 100px;
+    background: red;
+    border: none;
+    font-family: 'Press Start 2P', cursive;;
+    margin: 15px
+}
+
+.party-time-button{
+    background-color: red;
+    border-radius: 100px;
+}
+
+@media screen and (min-width: 0px){
+    .black-box {
+        font-size:2px;
+    }
+}
+
+@media screen and (min-width: 400px){
+    .black-box {
+        font-size: 6px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .black-box {
+        font-size: 9px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .black-box {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .black-box {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .black-box {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+

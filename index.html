@@ -44,31 +44,39 @@
    <div class="hero">
        <div class="hero-gray-layer"></div>
    </div>
+   <div class="spacer"> </div>
    <div class=" col-12 interactive-body">
     <!-- "BOOZE" CONTAINER -->
         <div class="col-6 booze">
             <header class="col-12 booze-header">
-                Pick your Ingredients!
+                Pick Your Poison!
             </header>
             <!-- note: "-right" is now top and "-left" is now bottom -->
             <div class="col-12 booze-right">
-                <div class="place-holder">
+                <img src="gameboyborder.jpg" class="booze-display">
+                <div class="booze-place-holder">
                     <ul class="booze-result"></ul>
                 </div>
             </div>
-            <div class="col-6 booze-left">
-                <button type="button" class="btn btn-primary" id="booze1">Vodka</button>
-                <button type="button" class="btn btn-primary" id="booze2">Tequila</button>
-                <button type="button" class="btn btn-primary" id="booze3">Whiskey</button>
-                <button type="button" class="btn btn-primary" id="booze4">Gin</button>
-                <button type="button" class="btn btn-primary" id="booze5">Rum</button> 
-                <button type="button" class="btn btn-primary" id="booze6">Mezcal</button>
-                <button type="button" class="btn btn-primary" id="booze7">Brandy</button>
-                <input class="btn btn-primary" type="reset" id="clearBtn1" value="Reset">
+            <!-- <div class="booze-spacer"></div> -->
+            <div class="col-12 booze-button-layout">
+                <div class="col-10 booze-left">
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze1">Vodka</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze2">Tequila</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze3">Whiskey</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze4">Gin</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze5">Rum</button> 
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze6">Mezcal</button>
+                    <button type="button" class="btn btn-primary booze-button" style="background-color: var(--gold); color: #106efd;" id="booze7">Brandy</button>
+                </div>
             </div>
+            <div class="col-12 booze-restart">
+                <input class="btn btn-primary booze-button" type="reset" id="clearBtn1" value="RESTART">
+            </div>  
         </div>
     <!-- "TUNES" CONTAINER -->
         <div class="col-6 tunes">
+
            <header class="col-12 tunes-header">
                <p>Vibin' (tunes)</p>
            </header>
@@ -78,38 +86,55 @@
             <div class="col-6 tunes-right">
                 <div class="place-holder tune-holder">
                     the...
+
+            <header class="col-12 tunes-header">
+               Pick Your Vibe!
+            </header>
+           <!-- note: "-right" is now top and "-left" is now bottom -->
+            <div class="col-12 tunes-right">
+                <img src="gameboyborder-blue-v2.jpg" class="vibes-display">
+                <div class="place-holder">
+                    <!-- PLACE RESULTS FOR SPOTIFY HERE -->
+                    <!-- <ul class="vibes-result"></ul> -->
                 </div>
+            </div>
+            <!-- <div class="tunes-spacer"></div> -->
+            <div class="col-12 tunes-button-layout">
+                <div class="col-10 tunes-left">
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes1">Rock</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes2">Classical</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes3">Jazz</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes4">Pop</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes5">R&B</button> 
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes6">Indie</button>
+                    <button type="button" class="btn btn-primary tunes-button" style="background-color: var(--gold); color: #106efd; border:none;" id="tunes7">Electronic</button>  
+
+                </div>
+            </div>
+            <div class="col-12 tunes-restart">
+                <input class="btn btn-primary tunes-button" type="reset" id="clearBtn2" value="RESTART">
             </div>
         </div>
     </div>
+    <div class="spacer"> </div>
    <!-- PAIRING CURATOR -->
     <div class="game">
 
         <div class="game-title" id="game">
-                <div class="game-title-top"><p>GROUP #1 PROUDLY PRESENTS:<p</div>
+                <div class="game-title-top">GROUP #1 PROUDLY PRESENTS:</div>
 
                 <div class="game-title-bottom">
-                    <div><h2 class="blinking-fire">🔥</h2></div>
-                    <p>THE WORLD FAMOUS "BOOZY TUNES PERFECT PAIRING CURATOR 5000"<p>
-                    <div><h2 class="blinking-fire">🔥</h2 ></div>
-                    </div>
+                    <h2 class="blinking-fire">🔥</h2>
+                        THE WORLD FAMOUS "BOOZY TUNES PERFECT PAIRING CURATOR 5000" 
+                    <h2 class="blinking-fire">🔥</h2 >
+                </div>
         </div>
-        <p>perfect pairing(game)</p>
-        <div class="game-body-middle">
-            <div class="place-holder">
-                the...
-            </div>
-            <div class="place-holder">
-                the...
-            </div>
-            <div class="place-holder">
-                the...
+        <div class="curator-display">
+            <img src="curator-display.jpg" class="curator-screen">
+            <div class="game-body-bottom">
+                <button type="button" class="btn btn-danger party-time-button">Party Time!</button>
             </div>
         </div>
-        <div class="game-body-bottom">
-            <button type="button" class="btn btn-danger">Party Time!</button>
-        </div>
-        
     </div>
    <!-- FOOTER -->
    <footer class="credits" id="support">
