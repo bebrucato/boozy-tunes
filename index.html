@@ -44,34 +44,45 @@
    <div class="hero">
        <div class="hero-gray-layer"></div>
    </div>
+   <div class="spacer"> </div>
    <div class=" col-12 interactive-body">
     <!-- "BOOZE" CONTAINER -->
         <div class="col-6 booze">
             <header class="col-12 booze-header">
-                Pick your Ingredients!
+                Pick Your Ingredients!
             </header>
             <!-- note: "-right" is now top and "-left" is now bottom -->
             <div class="col-12 booze-right">
-                <div class="place-holder">
+                <div class="booze-place-holder">
                     <ul class="booze-result"></ul>
                 </div>
             </div>
-            <div class="col-6 booze-left">
-                <button type="button" class="btn btn-primary" id="booze1">Vodka</button>
-                <button type="button" class="btn btn-primary" id="booze2">Tequila</button>
-                <button type="button" class="btn btn-primary" id="booze3">Whiskey</button>
-                <button type="button" class="btn btn-primary" id="booze4">Gin</button>
-                <button type="button" class="btn btn-primary" id="booze5">Rum</button> 
-                <button type="button" class="btn btn-primary" id="booze6">Mezcal</button>
-                <button type="button" class="btn btn-primary" id="booze7">Brandy</button>
-                <input class="btn btn-primary" type="reset" id="clearBtn1" value="Reset">
+            <div class="col-12 booze-button-layout">
+                <div class="col-10 booze-left">
+                    <button type="button" class="btn btn-primary booze-button" id="booze1">Vodka</button>
+                    <button type="button" class="btn btn-primary booze-button" id="booze2">Tequila</button>
+                    <button type="button" class="btn btn-primary booze-button" id="booze3">Whiskey</button>
+                    <button type="button" class="btn btn-primary booze-button" id="booze4">Gin</button>
+                    <button type="button" class="btn btn-primary booze-button" id="booze5">Rum</button> 
+                    <button type="button" class="btn btn-primary booze-button" id="booze6">Mezcal</button>
+                    <button type="button" class="btn btn-primary booze-button" id="booze7">Brandy</button>
+                </div>
+                <br>
+                <div class="col-12 booze-left">
+                    <input class="btn btn-primary booze-button" type="reset" id="clearBtn1" value="RESTART">
+                </div>  
             </div>
         </div>
     <!-- "TUNES" CONTAINER -->
         <div class="col-6 tunes">
-           <header class="col-12 tunes-header">
-               <p>Vibin' (tunes)</p>
-           </header>
+            <header class="col-12 tunes-header">
+               Pick Your Vibe!
+            </header>
+           <!-- note: "-right" is now top and "-left" is now bottom -->
+            <div class="col-12 tunes-right">
+                <div class="place-holder">
+                </div>
+            </div>
             <div class="col-6 tunes-left">
                 <div class="dropdown" style="margin:10px;">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -107,13 +118,9 @@
                     <button type="button" class="btn btn-primary">Submit</button>
                 </div>
             </div>
-            <div class="col-6 tunes-right">
-                <div class="place-holder">
-                    the...
-                </div>
-            </div>
         </div>
     </div>
+    <div class="spacer"> </div>
    <!-- PAIRING CURATOR -->
     <div class="game">
 
