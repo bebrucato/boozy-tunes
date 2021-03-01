@@ -451,6 +451,11 @@ button {
     border-radius: 100px;
 }
 
+
+#rock, #rb, #classical, #indie, #electronic, #jazz, #pop {
+    display:none;
+}
+
 @media screen and (min-width: 0px){
     .black-box {
         font-size:2px;
