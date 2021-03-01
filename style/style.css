@@ -55,6 +55,7 @@ img {
     font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
     top: 300px;
+    /* margin-top: 0; */
 }
 
 .spacer {
@@ -301,7 +302,8 @@ button {
     font-weight: bolder;
     width: 100%;
     color: var(--gold);
-    background-color: #1d2731;
+    /* background-color: #1d2731; */
+    margin: 10px 0;
     
 
 }
@@ -452,13 +454,70 @@ button {
 }
 
 
+/* BROKEN */
+@media screen and (max-width:750px){
+    .nav-bar {
+        flex-direction: column;
+        height: 160px;
+    }
+    .logo {
+        width: 100%;
+    }
+    .menu {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+/* gameboy column stack when display is small  */
+@media screen and (max-width:700px){
+    .interactive-body {
+        flex-direction: column;
+    }
+    .booze {
+        width: 100%;
+    }
+    .tunes {
+        width: 100%;
+    }
+}
+
+
+/* text resizing */
+
+
 #rock, #rb, #classical, #indie, #electronic, #jazz, #pop {
     display:none;
 }
 
+
 @media screen and (min-width: 0px){
     .black-box {
         font-size:2px;
+    }
+    .menu {
+        font-size:2px;
+    }
+    .temporary-logo {
+        font-size: 4px;
+    }
+    .booze-button {
+        font-size: 10px;
+    }
+    .tunes-button {
+        font-size: 10px;
+    }
+    .party-time-button {
+        font-size: 10px;
+    }
+    .game-title-top {
+        font-size: 4px;
+    }
+    .game-title-bottom {
+        font-size: 4px;
+    }
+    .blinking-fire {
+        font-size: 4px;
     }
 }
 
@@ -466,31 +525,98 @@ button {
     .black-box {
         font-size: 6px;
     }
+    .menu {
+        font-size: 6px;
+    }
+    .temporary-logo {
+        font-size: 8px;
+    }
+    .game-title-top {
+        font-size: 4px;
+    }
+    .game-title-bottom {
+        font-size: 4px;
+    }
+    .blinking-fire {
+        font-size: 4px;
 }
 
 @media screen and (min-width: 700px){
     .black-box {
         font-size: 9px;
     }
+    .menu {
+        font-size: 9px;
+    }
+    .booze-button {
+        font-size: 14px
+    }
+    .tunes-button {
+        font-size: 14px
+    }
+    .party-time-button {
+        font-size: 14px;
+    }
+    .game-title-top {
+        font-size: 8px;
+    }
+    .game-title-bottom {
+        font-size: 8px;
+    }
+    .blinking-fire {
+        font-size: 8px;
 }
 
 @media screen and (min-width: 800px){
     .black-box {
+        font-size: 12px;
+    }
+    .menu {
         font-size: 10px;
     }
-}
-
-@media screen and (min-width: 1000px){
-    .black-box {
+    .temporary-logo {
         font-size: 14px;
     }
+    .booze-button {
+        font-size: 16px
+    }
+    .tunes-button {
+        font-size: 16px
+    }
+    .party-time-button {
+        font-size: 16px;
+    }
+    .game-title-top {
+        font-size: 12px;
+    }
+    .game-title-bottom {
+        font-size: 12px;
+    }
+    .blinking-fire {
+        font-size: 12px;
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1100px){
     .black-box {
-        font-size: 20px;
+        font-size: 18px;
     }
+    .menu {
+        font-size: 14px;
+    }
+    .temporary-logo {
+        font-size: 22px;
+    }
+    .game-title-top {
+        font-size: 14px;
+    }
+    .game-title-bottom {
+        font-size: 14px;
+    }
+    .blinking-fire {
+        font-size: 14px;
 }
+
+
 
 
 
