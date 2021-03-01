@@ -453,10 +453,15 @@ button {
     border-radius: 100px;
 }
 
+
+
+/* menu becomes column when display is small */
+
 #rock, #rb, #classical, #indie, #electronic, #jazz, #pop {
     display:none;
 }
 /* BROKEN */
+
 @media screen and (max-width:750px){
     .nav-bar {
         flex-direction: column;
@@ -467,12 +472,12 @@ button {
     }
     .menu {
         width: 100%;
-        align-items: center;
+        justify-content: center;
     }
 }
 
 /* gameboy column stack when display is small  */
-@media screen and (max-width:700px){
+@media screen and (max-width:750px){
     .interactive-body {
         flex-direction: column;
     }
@@ -528,8 +533,8 @@ button {
     .menu {
         font-size: 6px;
     }
-    .temporary-logo {
-        font-size: 8px;
+    h1{
+        font-size: 15px;
     }
     .game-title-top {
         font-size: 4px;
@@ -574,9 +579,6 @@ button {
     .menu {
         font-size: 10px;
     }
-    .temporary-logo {
-        font-size: 14px;
-    }
     .booze-button {
         font-size: 16px;
     }
@@ -603,7 +605,7 @@ button {
     .menu {
         font-size: 14px;
     }
-    .temporary-logo {
+    h1 {
         font-size: 22px;
     }
     .game-title-top {
