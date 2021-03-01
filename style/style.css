@@ -11,6 +11,31 @@
    text-decoration: none;
 }
 
+@keyframes colorwave {
+    0% {
+        background-color: violet
+    }
+    20% {
+        background-color: blueviolet
+    }
+    40% {
+        background-color: blue
+    }
+    60% {
+        background-color: green
+    }
+    80% {
+        background-color: yellow
+    }
+    100% {
+        background-color: orangered
+    }
+}
+
+/* h1 {
+    animation: colorwave 8s infinite;
+} */
+
 body {
     display: flex;
     flex-direction: column;
@@ -451,8 +476,18 @@ button {
 .party-time-button{
     background-color: red;
     border-radius: 100px;
+    animation: colorwave 1s infinite;
+    border: none;
 }
 
+iframe{
+    position: absolute;
+    z-index: 999;
+    top: -10px;
+    left: 85px;
+    width: 220px;
+    height: 220px;
+}
 
 
 /* menu becomes column when display is small */
@@ -617,6 +652,27 @@ button {
     .blinking-fire {
         font-size: 14px;
 }
+
+/* fetch display */
+@media screen and (min-width:200px){
+    iframe{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (min-width:500px){
+    iframe{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (min-width:700px){
+    iframe{
+        width: 220px;
+        height: 220px;
+    }
+}
+
 
 
 
