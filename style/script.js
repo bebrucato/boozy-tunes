@@ -522,24 +522,7 @@ $("#booze7").click( function (){
 
 //access_token
 
-var token = "BQDOTYFnrN1OCk46BZUaEbL1WjXnLFyzlsWvjMjDzKyuttUFiY6xMt8S2XAfiIItgFIavvYvXx62Sc0Hr6UK7l0pStn0WMxGCjM_TO9SUAgnDz7nHsSZtKKPwyPA8wQygNVbtLvgKeg6sK0ouX5nBwMmAOWEUVkNMkw71hrQ_CbrfJc"
-var rockPlaylist = "37i9dQZF1DWXRqgorJj26U"
-var queryURL1 = "https://api.spotify.com/v1/playlists/" + rockPlaylist;
-    //ajax call for searched artist Spotify ID 
-        $.ajax({
-            crossDomain: true,
-            headers:{"Content-Type": "application/json", "Authorization":"Bearer " + token},
-            url: queryURL1,
-            method: "GET"
-        }) .then(function(response) {
-            console.log(response)
-            for(var i = 0; i < response.tracks.items.length; i++) {
-                var source = $("<source>");
-                source.attr("src", response.tracks.items[i].href)
-                source.attr("type", "audio");
-                $("#playlist").append(source);
-            }
-        });
+
 
         
 
