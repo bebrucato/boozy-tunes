@@ -506,7 +506,22 @@ $("#booze7").click( function (){
     $("#clearBtn1").click( function(){
         boozeResult.empty()
     })
-    
+
+
+
+
+//Tunez Side/Spotify API Key
+
+
+//access_token
+
+
+
+        
+
+
+
+
 })
 
 
