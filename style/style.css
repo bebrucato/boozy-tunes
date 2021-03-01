@@ -3,7 +3,7 @@
     --dark: #1d2731;
     --bluetext: #106efd;
     --pink: #c8b8c8;
-    --darkpink: rgb(190, 157, 190)
+    --darkpink: rgb(190, 157, 190);
 }
 
 * {
@@ -436,8 +436,8 @@ button {
     border-radius: 100px;
     background: red;
     border: none;
-    font-family: 'Press Start 2P', cursive;;
-    margin: 15px
+    font-family: 'Press Start 2P', cursive;
+    margin: 15px;
 }
 
 #clearBtn2 {
@@ -454,7 +454,14 @@ button {
 }
 
 
+
 /* menu becomes column when display is small */
+
+#rock, #rb, #classical, #indie, #electronic, #jazz, #pop {
+    display:none;
+}
+/* BROKEN */
+
 @media screen and (max-width:750px){
     .nav-bar {
         flex-direction: column;
@@ -486,9 +493,7 @@ button {
 /* text resizing */
 
 
-#rock, #rb, #classical, #indie, #electronic, #jazz, #pop {
-    display:none;
-}
+
 
 
 @media screen and (min-width: 0px){
@@ -549,10 +554,10 @@ button {
         font-size: 9px;
     }
     .booze-button {
-        font-size: 14px
+        font-size: 14px;
     }
     .tunes-button {
-        font-size: 14px
+        font-size: 14px;
     }
     .party-time-button {
         font-size: 14px;
