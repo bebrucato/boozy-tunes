@@ -510,17 +510,45 @@ $("#booze7").click( function (){
 
 
 
-//Tunez Side/Spotify API Key
+//Tunez Side/Spotify
+
+$("#tunes1").on("click", function(){
+    $("#rock").show()
+    $("#pop, #jazz, #rb, #classical, #indie, #electronic").hide()
+}) 
+   
+$("#tunes2").on("click", function(){
+    $("#classical").show()
+    $("#pop, #jazz, #rb, #rock, #indie, #electronic").hide()
+}) 
+   
+$("#tunes3").on("click", function(){
+    $("#jazz").show()
+    $("#pop, #classical, #rb, #rock, #indie, #electronic").hide()
+}) 
+
+$("#tunes4").on("click", function(){
+    $("#pop").show()
+    $("#classical, #jazz, #rb, #rock, #indie, #electronic").hide()
+}) 
+
+$("#tunes5").on("click", function(){
+    $("#rb").show()
+    $("#pop, #jazz, #classical, #rock, #indie, #electronic").hide()
+}) 
+
+$("#tunes6").on("click", function(){
+    $("#indie").show()
+    $("#pop, #jazz, #rb, #rock, #classical, #electronic").hide()
+}) 
+
+$("#tunes7").on("click", function(){
+    $("#electronic").show()
+    $("#pop, #jazz, #rb, #rock, #classical, #indie").hide()
+}) 
 
 
-//access_token
-
-
-
-        
-
-
-
+    
 
 })
 
