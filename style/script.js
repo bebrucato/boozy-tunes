@@ -20,9 +20,7 @@ $(document).ready(function () {
     var vodka = $("#booze1")
     // var vodkaUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=vodka";
     var boozeResult = $(".booze-result")
-    var boozeMenu = $(".booze-menu")
-    
-    var vodkaArray = ["idDrink:15346", "idDrink:17105", "idDrink:14029"]
+   
     
     function displayDrink(drinkList) {
         for(var i = 0; i < drinkList.length; i++) {
@@ -34,9 +32,6 @@ $(document).ready(function () {
             var boozeRecipe = $("<li>");
             var boozeIngredient1 = $("<li>");
             var boozeIngredient2 = $("<li>")
-            var boozeIngredient3 = $("<li>")
-            var boozeIngredient4 = $("<li>")
-            var boozeIngredient5 = $("<li>")
             // Destination = boozeHeader, action=text, content=drinkList[i].strDrink
             boozeHeader.text(drinkList[i].strDrink);
             boozeRecipe.text(drinkList[i].strInstructions);
@@ -548,8 +543,92 @@ $("#tunes7").on("click", function(){
 }) 
 
 
-    
+var randomCocktailURL= "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+ randomBooze = $(".random-booze")
 
+ function randoC(drinkList) {
+    for(var i = 0; i < drinkList.length; i++) {
+        var randboozeItem = $("<li>");
+        var randboozeRow = $("<div>");
+        var randboozeColumn = $("<div>");
+        var randboozeImage = $("<img>")
+        var randboozeHeader = $("<h1>");
+        var randboozeRecipe = $("<li>");
+        var randboozeIngredient1 = $("<li>");
+        var randboozeIngredient2 = $("<li>")
+    
+        // Destination = boozeHeader, action=text, content=drinkList[i].strDrink
+        randboozeHeader.text(drinkList[i].strDrink);
+        randboozeRecipe.text(drinkList[i].strInstructions);
+        randboozeIngredient1.text(drinkList[i].strIngredient1);
+        randboozeIngredient2.text(drinkList[i].strIngredient2);
+        randboozeImage.attr("src", drinkList[i].strDrinkThumb);
+        randboozeImage.attr("alt", drinkList[i].strDrink);
+        randboozeImage.addClass("rand-booze-img");
+        randboozeHeader.addClass("rand-booze-header");
+        randboozeRow.addClass("row");
+        randboozeRow.attr("rand-data-drink", drinkList[i].idDrink)
+        randboozeColumn.addClass("col-md-12");
+        randboozeItem.append(randboozeHeader);
+        randboozeItem.append(randboozeImage);
+        randboozeItem.append(randboozeIngredient1);
+        randboozeItem.append(randboozeIngredient2);
+        randboozeItem.append(randboozeRecipe); 
+        randboozeColumn.append(randboozeItem);
+        randboozeRow.append(randboozeColumn)
+        randomBooze.append(randboozeRow);
+    }}
+
+$(".party-time-button").click(function (){
+    getAPI(randomCocktailURL,"")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        randoC(data.drinks);
+    })
+    .catch(function(err) {
+        console.error(err)
+    });
+
+    $(".random-tunes").append(x)
+    x[Math.floor(Math.random()*7)].show()
+})
+
+$("#clearBtn2").click( function(){
+    $(".random-display").empty()
+})
+
+
+
+
+function shuffle(){
+    var index = []
+    var randPlaylists = [$(".1"),$(".2"),$(".3"),$(".4"),$(".5"),$(".6"),$(".7")]
+    var shuffledPlaylists = []
+  
+
+    for (let i= Math.floor(Math.random()* randPlaylists.length); index.length<randPlaylists.length;
+     i=Math.floor(Math.random()*randPlaylists.length)) {
+  if (!index.includes(i)){
+  index.push(i);
+  } else {i=Math.floor(Math.random()*randPlaylists.length)}
+}
+
+var shuffler = (arr,shuf) => {
+for (let j = 0; j<randPlaylists.length; j++)
+  shuffledPlaylists[j]=arr[shuf[j]]
+}
+
+shuffler(randPlaylists,index);
+return shuffledPlaylists;
+  }
+
+
+var x= shuffle()
+console.log(x)
+
+  
 })
 
 
