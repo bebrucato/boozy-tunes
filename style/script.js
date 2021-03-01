@@ -518,100 +518,34 @@ $("#booze7").click( function (){
 
 
 //Tunez Side/Spotify API Key
-var APIController = (function(){
 
-    var clientID = "";
-    var clientSecret = "";
 
-//private methods
-var _getToken = async () => {
+//access_token
 
-    var result = await fetch("https://accounts.spotify.com/api/token", {
-        method: 'POST',
-        headers: {
-            'Content-Type' : 'application/x-www-form-urlencoded',
-            'Authorization' : 'Basic' + btoa(clientId + ':' + clientSecret)
-        },
-        body: 'grant_type=client_credentials'
-    });
+var token = "BQDOTYFnrN1OCk46BZUaEbL1WjXnLFyzlsWvjMjDzKyuttUFiY6xMt8S2XAfiIItgFIavvYvXx62Sc0Hr6UK7l0pStn0WMxGCjM_TO9SUAgnDz7nHsSZtKKPwyPA8wQygNVbtLvgKeg6sK0ouX5nBwMmAOWEUVkNMkw71hrQ_CbrfJc"
+var rockPlaylist = "37i9dQZF1DWXRqgorJj26U"
+var queryURL1 = "https://api.spotify.com/v1/playlists/" + rockPlaylist;
+    //ajax call for searched artist Spotify ID 
+        $.ajax({
+            crossDomain: true,
+            headers:{"Content-Type": "application/json", "Authorization":"Bearer " + token},
+            url: queryURL1,
+            method: "GET"
+        }) .then(function(response) {
+            console.log(response)
+            for(var i = 0; i < response.tracks.items.length; i++) {
+                var source = $("<source>");
+                source.attr("src", response.tracks.items[i].href)
+                source.attr("type", "audio");
+                $("#playlist").append(source);
+            }
+        });
 
-    var data = await result.json();
-    return data.access_token;
-}
+        
 
-var _getGenres = async (token) => {
 
-    var result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=sv_US`, {
-        method: 'GET',
-        headers: {'Authorization' : 'Bearer' + token}
-    });
 
-    var data = await result.json();
-    return data.categories.items;
-}
 
-var _getPlalistByGenre = async (token, genreId) => {
-
-    var limit = 10;
-
-    var result = await fetch(`https://api.spotify.com/v1/browse/categories/${genreID}/playlists?limit=${limit}`, {
-
-    method: 'GET',
-    headers: {'Authorization' : 'Bearer' + token}
-    });
-
-    var data = await result.json();
-    return data.playlists.items;
-}
-
-var _getTracks = async (token, tracksEndPoint) => {
-
-    var limit = 10;
-
-    var result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
-        method: 'GET',
-        headers: {'Authorization' : 'Bearer' + token}
-    });
-
-    var data = result.json();
-    return data.items;
-}
-
-var _getTrack = async (token, trackEndPoint) => {
-
-    var result = await fetch(`${trackEndPoint}`, {
-        method: 'GET',
-        headers: { 'Authorization' : 'Bearer' + token}
-    });
-
-    var data = await result.json();
-    return data;
-}
-
-return {
-    getToken() {
-        return _getToken();
-    },
-    getGenres(token) {
-        return _getGenres(token);
-    },
-    getPlaylistByGenre(token, genreId) {
-        return _getPlaylistByGenre(token, genreId);
-    },
-    getTracks(token, tracksEndPoint) {
-        return _getTracks(token, tracksEndPoint);
-    },
-    getTrack(token, trackEndPoint) {
-        return _getTrack(token,trackEndPoint);
-    }
-}
-
-})
-    
-var UIController = (function(){
-
-    var DOMElements = {}
-})
 })
 
 
