@@ -480,8 +480,7 @@ button {
     border: none;
 }
 
-iframe{
-    position: absolute;
+iframe {
     z-index: 999;
     top: -10px;
     left: 85px;

@@ -10,10 +10,11 @@ Alex Lee
 Briana Brucato
 Steven Moseni
 
-## APIs:
+## API URLs:
 
-For the booze: https://www.thecocktaildb.com/api.php
-For the tunes: https://developer.spotify.com/documentation/web-api/
+[For the booze](https://www.thecocktaildb.com/api.php)
+
+[For the tunes](https://developer.spotify.com/documentation/web-api/)
 
 
 ## User Story
