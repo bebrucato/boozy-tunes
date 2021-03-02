@@ -438,10 +438,7 @@ button {
     font-size: 7px;
 }
 
-.random-tunes{
-    /* border: 1px solid yellow; */
-    /* overflow: hidden; */
-}
+
 #booze1 {
     background: orange;
     border: none;
@@ -506,12 +503,7 @@ button {
     border: none;
 }
 
-<<<<<<< HEAD
-iframe {
-=======
 iframe{
-    /* position: absolute; */
->>>>>>> cc85c5f9e37d7a8e5d6d34d308678440b1bdc031
     z-index: 999;
     top: -10px;
     left: 85px;
