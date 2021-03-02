@@ -596,8 +596,13 @@ $(".party-time-button").click(function (){
 })
 
 $("#clearBtn2").click( function(){
-    $(".random-display").empty()
+    $(".random-booze").empty()
+    $(".random-tunes").empty()
 })
+
+
+
+
 
 
 
