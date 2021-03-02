@@ -4,6 +4,7 @@
     --bluetext: #106efd;
     --pink: #c8b8c8;
     --darkpink: rgb(190, 157, 190);
+    --matrix: rgb(38, 252, 74);
 }
 
 * {
@@ -278,9 +279,9 @@ button {
 .place-holder {
     position: absolute;
     display: flex;
+    justify-content: center;
     width: 380px;
     height:260px;
-    border: 5px solid var(green);
     margin: 30px;
     z-index: 99999;
     margin: 200px;
@@ -323,7 +324,7 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 2px;
     font-weight: bolder;
     width: 100%;
     color: var(--gold);
@@ -385,7 +386,7 @@ button {
     list-style: none;
     font-family: 'Press Start 2P', cursive;
     font-size: 8px;
-    color: rgb(38, 252, 74);
+    color: var(--matrix);
     overflow-x: hidden;
     z-index: 99999;
 }
@@ -416,6 +417,31 @@ button {
     align-items: center;
 }
 
+.random-display{
+    display: flex;
+    flex-direction: row;
+    z-index: 9999;
+    position: absolute;
+    margin-bottom: 110px;
+    justify-content: center;
+    height: 240x;
+    width: 350px;
+    overflow-y: hidden;
+}
+
+.random-booze{
+    /* border: 1px solid red; */
+    list-style-type: none;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--matrix);
+    font-size: 7px;
+}
+
+.random-tunes{
+    /* border: 1px solid yellow; */
+    /* overflow: hidden; */
+}
 #booze1 {
     background: orange;
     border: none;
@@ -480,7 +506,12 @@ button {
     border: none;
 }
 
+<<<<<<< HEAD
 iframe {
+=======
+iframe{
+    /* position: absolute; */
+>>>>>>> cc85c5f9e37d7a8e5d6d34d308678440b1bdc031
     z-index: 999;
     top: -10px;
     left: 85px;
@@ -578,7 +609,7 @@ iframe {
         font-size: 4px;
     }
     .blinking-fire {
-        font-size: 4px;
+        font-size: 6px;
 }
 
 @media screen and (min-width: 700px){
@@ -604,7 +635,7 @@ iframe {
         font-size: 8px;
     }
     .blinking-fire {
-        font-size: 8px;
+        font-size: 12px;
 }
 
 @media screen and (min-width: 800px){
@@ -630,7 +661,7 @@ iframe {
         font-size: 12px;
     }
     .blinking-fire {
-        font-size: 12px;
+        font-size: 20px;
 }
 
 @media screen and (min-width: 1100px){
@@ -650,7 +681,7 @@ iframe {
         font-size: 14px;
     }
     .blinking-fire {
-        font-size: 14px;
+        font-size: 24px;
 }
 
 /* fetch display */

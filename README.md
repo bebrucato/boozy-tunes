@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to Boozy-Tunes, the worlds leading Cocktail / Music-Playlist generator! Once the user enters our virtual "Bar-cade" they are presented with our patented "boozyTunes, Game-Child" generators; one titled "Pick Your Poison" to create a cocktail generated with their liquor of choice, the other titled "Pick Your Vibe" generates a unique playlist to perfectly pair a musical vibe with the users drink of choice! Still undecided...worry not, our "final-boss" generator located at the bottom of our screen will generate both a random "Poision" and "Vibe". 
+Welcome to Boozy-Tunes, the worlds leading Cocktail / Music-Playlist generator! Once the user enters our virtual "Bar-cade" they are presented with our patented "boozyTunes, Game-Child" generators; one titled "Pick Your Poison" to create a cocktail generated with their liquor of choice, the other titled "Pick Your Vibe" generates a unique playlist to perfectly pair a musical vibe with the users drink of choice! Still undecided...worry not, our "final-boss" generator located at the bottom of our screen will generate both a random "Poison" and "Vibe". 
 
 ## Collaborators:
 
